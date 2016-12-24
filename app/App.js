@@ -16,7 +16,7 @@ class App extends Component {
         }
     }
     inputChange(inputValue) {
-        console.log('Input Value: ', inputValue);
+        console.log('Input Value', inputValue);
         this.setState({ inputValue })
     }
 
@@ -26,9 +26,7 @@ class App extends Component {
             <View style={styles.container}>
                 <ScrollView style={styles.content}>
                     <Heading />
-                    <Input
-                        inputValue={inputValue}
-                        inputChange={(text) => this.inputChange(text)} />
+                    <Input inputValue={inputValue} inputChange={(text) => this.inputChange((text))} />
                 </ScrollView>
           </View>
         )
@@ -37,11 +35,11 @@ class App extends Component {
 
 const styles = StyleSheet.create({
    container: {
-       flex:1,
-       backgroundColor: '#f5f5f5'
+        flex:1,
+        backgroundColor: '#f5f5f5'
    },
     content: {
-       flex:1,
+        flex:1,
         paddingTop: 60
     }
 });
