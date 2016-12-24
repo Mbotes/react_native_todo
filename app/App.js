@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet} from 'react-native'
+import Heading from './Heading'
 
 class App extends Component {
     constructor() {
@@ -17,7 +18,7 @@ class App extends Component {
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.content}>
-                    <View />
+                    <Heading />
                 </ScrollView>
           </View>
         )
