@@ -3,7 +3,7 @@ import { View, TextInput, StyleSheet } from 'react-native'
 
 const Input = ({inputValue, inputChange}) => (
   <View style={styles.inputContainer}>
-      <TextInput value={inputValue} style={styles.input} placeholder='What needs to get done?' placeholderTextColor="#CACACA" selectionColor="#666666" autoFocus={true}/>
+      <TextInput value={inputValue} style={styles.input} placeholder='What needs to get done?' placeholderTextColor="#CACACA" selectionColor="#666666" onChangeText={inputChange}/>
   </View>
 );
 
