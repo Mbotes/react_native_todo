@@ -7,6 +7,7 @@ import Heading from './Heading'
 import Input from './Input'
 import Button from './Button'
 import TodoList from './TodoList'
+import TabBar from './TabBar'
 
 let todoIndex = 0;
 
@@ -86,6 +87,7 @@ class App extends Component {
                               todos={todos}/>
                     <Button submitTodo={() => this.submitTodo()}/>
                 </ScrollView>
+                <TabBar type={type} setType={this.setType.bind(this)} />
             </View>
         )
     }

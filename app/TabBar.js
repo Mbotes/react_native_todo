@@ -15,6 +15,7 @@ const TabBar = ({ setType, type }) => (
     </View>
 );
 
+
 const styles = StyleSheet.create({
     container: {
         height: 70,
