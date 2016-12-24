@@ -10,6 +10,7 @@ const Input = ({inputValue, inputChange}) => (
 
 const styles = StyleSheet.create({
    inputContainer: {
+       marginTop: 20,
        marginLeft: 20,
        marginRight: 20,
        shadowOpacity: 0.2,

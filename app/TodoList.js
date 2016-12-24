@@ -5,10 +5,14 @@ import React from 'react'
 import { View } from 'react-native'
 import Todo from './Todo'
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos, toggleComplete, deleteTodo }) => {
     todos = todos.map((todos, i) => {
         return (
-            <Todo key={i} todo={todos}/>
+            <Todo
+                toggeComplete={toggleComplete}
+                deleteTodo={deleteTodo}
+                key={i}
+                todo={todos}/>
         )
     });
     return (
