@@ -35,6 +35,7 @@ class App extends Component {
 
     //setType function
     setType (type) {
+        console.log('type value: ', type);
         this.setState({ type })
     }
 
@@ -76,13 +77,14 @@ class App extends Component {
     }
 
     render() {
-        const { inputValue, todos } = this.state;
+        const { inputValue, todos, type } = this.state;
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.content}>
                     <Heading />
                     <Input inputValue={inputValue} inputChange={(text) => this.inputChange((text))} />
-                    <TodoList toggleComplete={this.toggleComplete}
+                    <TodoList type={type}
+                              toggleComplete={this.toggleComplete}
                               deleteTodo={this.deleteTodo}
                               todos={todos}/>
                     <Button submitTodo={() => this.submitTodo()}/>
