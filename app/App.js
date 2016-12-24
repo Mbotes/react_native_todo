@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet} from 'react-native'
 import Heading from './Heading'
+import Input from './Input'
 
 class App extends Component {
     constructor() {
@@ -14,11 +15,20 @@ class App extends Component {
             type: 'All'
         }
     }
+    inputChange(inputValue) {
+        console.log('Input Value: ', inputValue);
+        this.setState({ inputValue })
+    }
+
     render() {
+        const { inputValue } = this.state;
         return (
-            <View style={styles.container} refreshing={false}>
+            <View style={styles.container}>
                 <ScrollView style={styles.content}>
                     <Heading />
+                    <Input
+                        inputValue={inputValue}
+                        inputChange={(text) => this.inputChange(text)} />
                 </ScrollView>
           </View>
         )
