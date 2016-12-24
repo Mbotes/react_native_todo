@@ -29,6 +29,7 @@ class App extends Component {
         console.log('Input Value', inputValue);
         this.setState({ inputValue })
     }
+
     //submit function
     submitTodo() {
         if (this.state.inputValue.match(/^\s*$/)){
@@ -45,6 +46,7 @@ class App extends Component {
             console.log('State: ', this.state)
         })
     }
+
     //delete function
     deleteTodo(todoIndex) {
         let { todos } = this.state;
@@ -53,10 +55,11 @@ class App extends Component {
         });
         this.setState({ todos })
     }
+
     //complete function
     toggleComplete (todoIndex) {
         let { todos } = this.state;
-        todos.forEach((todos) => {
+        todos.forEach((todo) => {
             if(todo.todoIndex === todoIndex) {
                 todo.complete = !todo.complete
             }

@@ -4,7 +4,7 @@
 import React from 'react'
 import { Text, TouchableHighlight, StyleSheet } from 'react-native'
 
-const TodoButton = ({ onPress, complete, name}) => (
+const TodoButton = ({ onPress, complete, name }) => (
       <TouchableHighlight
           onPress={onPress}
           underlayColor="#efefef"
