@@ -22,12 +22,19 @@ class App extends Component {
 
         this.toggleComplete = this.toggleComplete.bind(this);
         this.deleteTodo = this.deleteTodo.bind(this);
+
+        this.setType = this.setType.bind(this);
     }
 
     //inputChange Function
     inputChange(inputValue) {
         console.log('Input Value', inputValue);
         this.setState({ inputValue })
+    }
+
+    //setType function
+    setType (type) {
+        this.setState({ type })
     }
 
     //submit function
