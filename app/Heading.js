@@ -5,7 +5,7 @@ import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 
 const Heading = () => (
-    <View style={styles.header}>
+    <View style={styles.header} refreshing={false}>
         <Text style={styles.headerText}>
             Todos
         </Text>
@@ -14,7 +14,7 @@ const Heading = () => (
 
 const styles = StyleSheet.create({
     header: {
-        marginTop: 80
+        marginTop: 10
     },
     headerText: {
         textAlign: 'center',

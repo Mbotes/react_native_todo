@@ -7,7 +7,7 @@ import Heading from './Heading'
 
 class App extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
             inputValue: '',
             todos: [],
@@ -16,7 +16,7 @@ class App extends Component {
     }
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.container} refreshing={false}>
                 <ScrollView style={styles.content}>
                     <Heading />
                 </ScrollView>
